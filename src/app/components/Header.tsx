@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import styles from "@/app/styles/Header.module.css";
 import { useMarket, type Base } from "@/app/context/MarketContext";
 import ThemeToggle from "./ThemeToggle";
@@ -18,7 +19,7 @@ export default function Header() {
       <div className={styles.inner}>
         {/* LEFT: Logo + Title */}
         <div className={styles.brand}>
-          <img src="logo.png" alt="Melanion" className={styles.logo} />
+          <Image src="/logo.png" alt="Melanion" width={60} height={60} className={styles.logo} />
           <h1 className={styles.title}>Melanion Demo</h1>
         </div>
 
@@ -254,7 +255,7 @@ function ProfileMenu() {
             if (e.key === "ArrowDown") { e.preventDefault(); moveFocus(1); }
             if (e.key === "ArrowUp")   { e.preventDefault(); moveFocus(-1); }
             if (e.key === "Home")      { e.preventDefault(); (menuRef.current?.querySelector(itemSelectors) as HTMLElement)?.focus(); }
-            if (e.key === "End")       { e.preventDefault(); [...(menuRef.current?.querySelectorAll(itemSelectors) ?? [])].pop()?.focus(); }
+            if (e.key === "End")       { e.preventDefault(); (([...(menuRef.current?.querySelectorAll(itemSelectors) ?? [])].pop() as HTMLElement)?.focus()); }
           }}
         >
           {/* Header */}

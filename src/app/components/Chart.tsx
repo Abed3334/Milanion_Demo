@@ -78,7 +78,7 @@ export default function RealTimeChart({
             hour: "2-digit",
             minute: "2-digit",
           });
-        }) as TickMarkFormatter<UTCTimestamp>,
+        }) as TickMarkFormatter,
       },
     });
 
@@ -122,7 +122,7 @@ export default function RealTimeChart({
     const qs = `symbol=${sym}&interval=${intv}&limit=${lim}&endTime=${end}`;
     const url = `https://api.binance.com/api/v3/klines?${qs}`;
     const r = await axios.get(url, { timeout: 10000 });
-    return r.data as any[];
+    return r.data as number[][];
   }
 
   // ---------- Load Historical Candles ----------

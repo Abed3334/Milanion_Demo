@@ -9,10 +9,10 @@ export type Ticker = {
 
 export async function fetchTickersByBase(base: string): Promise<Ticker[]> {
   const { data } = await axios.get("https://api.binance.com/api/v3/ticker/24hr");
-  const filtered = (data as any[])
+  const filtered = (data as Record<string, unknown>[])
     .filter((t) => (t.symbol as string).endsWith(base.toUpperCase()))
     .map((t) => ({
-      symbol: t.symbol,
+      symbol: t.symbol as string,
       lastPrice: Number(t.lastPrice),
       priceChangePercent: Number(t.priceChangePercent),
       volume: Number(t.volume)
@@ -39,7 +39,7 @@ export async function fetchOrderBook(symbol: string, limit = 25): Promise<OrderB
         .map(([p, q]) => ({ price: Number(p), qty: Number(q) }));
       if (!bids.length && !asks.length) return null;   // empty book
       return { bids, asks };
-    } catch (e) {
+    } catch {
       return null;
     }
   }
