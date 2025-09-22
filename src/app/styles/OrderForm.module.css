@@ -1,4 +1,4 @@
-/* Card is full-height and flex to keep CTA pinned to bottom */
+
 .card {
     padding: 16px;
     display: flex;
@@ -9,8 +9,8 @@
     max-width: 100%;
     box-sizing: border-box;
 }
-  
-  /* Header row: tabs + symbol on the right */
+
+
   .headerRow {
     display: flex;
     align-items: center;
@@ -23,8 +23,8 @@
     font-weight: 700;
     letter-spacing: .2px;
   }
-  
-  /* -------- Tabs -------- */
+
+
   .tabs {
     display: inline-flex;
     gap: 6px;
@@ -33,7 +33,7 @@
     padding: 4px;
     border-radius: 10px;
   }
-  
+
   .tab {
     border: 1px solid transparent;
     background: transparent;
@@ -46,7 +46,7 @@
     transition: background .15s ease, border-color .15s ease, opacity .15s ease, transform .15s ease;
   }
   .tab:hover { opacity: 1; transform: translateY(-1px); }
-  
+
   .tabActiveBuy {
     background: linear-gradient(180deg, rgba(0,200,83,.25), rgba(0,200,83,.12));
     border-color: rgba(0,200,83,.45);
@@ -57,8 +57,8 @@
     border-color: rgba(255,82,82,.45);
     opacity: 1;
   }
-  
-  /* -------- Balance row -------- */
+
+
   .balanceRow {
     display: flex;
     gap: 8px;
@@ -69,15 +69,15 @@
     padding: 8px 10px;
   }
   .balanceItem { display: flex; align-items: center; justify-content: space-between; flex: 1; }
-  
-  /* -------- Form -------- */
+
+
   .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex: 1;                     /* <-- makes form fill the card */
+    flex: 1;                     
   }
-  
+
   .row {
     display: flex;
     gap: 10px;
@@ -85,13 +85,13 @@
   .row > * {
     flex: 1;
   }
-  
+
   .label {
     color: var(--muted);
     font-size: 14px;
     padding: 0 2px 4px;
   }
-  
+
   .input {
     height: 42px;
     background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
@@ -110,8 +110,8 @@
     box-shadow: 0 0 0 3px rgba(74,198,255,.25);
     background: rgba(74,198,255,.12);
   }
-  
-  /* -------- Quick row (presets + slider) -------- */
+
+
   .quickRow { display: flex; flex-direction: column; gap: 8px; }
   .quick {
     display: flex;
@@ -129,15 +129,15 @@
     flex: 1;
   }
   .quick > button:hover { transform: translateY(-1px); }
-  
+
   .range {
     width: 100%;
-    accent-color: #4AC6FF;      /* Melanion blue */
+    accent-color: #4AC6FF;      
   }
-  
-  /* Total-like summary that flex-grows to keep CTA at the bottom */
+
+
   .summary {
-    margin-top: auto;           /* pushes summary + CTA to the bottom region */
+    margin-top: auto;           
     display: flex;
     gap: 8px;
     background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
@@ -146,12 +146,12 @@
     padding: 8px 10px;
   }
   .summaryItem { display: flex; align-items: center; justify-content: space-between; flex: 1; }
-  
+
   .k { color: var(--muted); font-size: 12px; display: block; }
   .v { color: var(--text); font-weight: 600; }
   .vStrong { color: var(--text); font-weight: 800; }
-  
-  /* CTA button */
+
+
   .cta {
     margin-top: 10px;
     height: 46px;
@@ -173,8 +173,8 @@
   }
   .cta:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(0,0,0,.35); }
   .cta:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; }
-  
-  /* Professional responsive design */
+
+
   @media (max-width: 1200px) {
     .card {
       min-height: 420px;
@@ -268,4 +268,4 @@
       font-size: 13px;
     }
   }
-  
+

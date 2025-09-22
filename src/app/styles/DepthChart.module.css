@@ -26,7 +26,7 @@
   outline: 1px solid rgba(255,255,255,.04);
 }
 
-/* Light theme depth chart rows */
+
 .light .row {
   background: rgba(0,0,0,.02);
   outline: 1px solid rgba(0,0,0,.06);
@@ -42,7 +42,7 @@
   background: linear-gradient(90deg, rgba(255,82,82,.65), rgba(255,82,82,.35));
 }
 
-/* Light theme depth chart colors */
+
 .light .barBid {
   background: linear-gradient(90deg, rgba(5,150,105,.7), rgba(5,150,105,.4));
 }
@@ -58,7 +58,7 @@
   opacity: .5;
 }
 
-/* message style */
+
 .depthEmpty, .depthMsg {
   color: var(--muted);
   padding: 10px 12px;
@@ -66,7 +66,7 @@
 
   .barAsk { position: absolute; right: 0; top: 0; bottom: 0; background: rgba(255,82,82,.35); }
 
-/* Professional responsive design */
+
 @media (max-width: 1400px) {
   .wrap {
     gap: 7px;
@@ -149,4 +149,4 @@
     padding: 6px 8px;
   }
 }
-  
+

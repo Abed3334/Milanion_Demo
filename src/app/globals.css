@@ -1,4 +1,3 @@
-/* ---- Base / reset ---- */
 * { 
   box-sizing: border-box; 
   margin: 0; 
@@ -21,14 +20,13 @@ body {
   overflow-x: hidden;
 }
 
-/* ---- Melanion palette (from logo) ---- */
 :root {
-  --bg: #0D1B2A;            /* primary dark background */
-  --panel: #13283B;         /* card bg */
-  --panel-2: #0F2234;       /* slightly darker */
-  --brand: #003366;         /* brand blue */
-  --accent: #4AC6FF;        /* light blue accent */
-  --text: #F5F7FA;          /* on dark */
+  --bg: #0D1B2A;
+  --panel: #13283B;
+  --panel-2: #0F2234;
+  --brand: #003366;
+  --accent: #4AC6FF;
+  --text: #F5F7FA;
   --muted: #9AA7B5;
 
   --positive: #00C853;
@@ -54,25 +52,24 @@ body {
   width: 100%;
 }
 
-/* Light theme specific card styling */
 .light .card {
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: var(--shadow);
 }
 
 .light {
-  --bg: #FAFBFC;                    /* Soft, clean background */
-  --panel: #FFFFFF;                 /* Pure white panels */
-  --panel-2: #F8FAFC;              /* Subtle panel variation */
-  --brand: #1E40AF;                /* Professional blue */
-  --accent: #3B82F6;               /* Vibrant but professional accent */
-  --text: #1F2937;                 /* Rich dark text */
-  --muted: #6B7280;                /* Professional muted text */
+  --bg: #FAFBFC;
+  --panel: #FFFFFF;
+  --panel-2: #F8FAFC;
+  --brand: #1E40AF;
+  --accent: #3B82F6;
+  --text: #1F2937;
+  --muted: #6B7280;
   
-  --positive: #059669;             /* Professional green */
-  --negative: #DC2626;             /* Professional red */
+  --positive: #059669;
+  --negative: #DC2626;
   
-  --radius: 12px;                  /* Slightly smaller radius for light theme */
+  --radius: 12px;
   --shadow: 0 4px 20px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.1);
 }
 

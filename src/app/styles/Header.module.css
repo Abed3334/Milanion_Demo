@@ -13,28 +13,25 @@
     box-sizing: border-box;
   }
 
-  /* Light theme header styling */
   .light .header {
     background: var(--panel);
     border-bottom: 1px solid rgba(0,0,0,.08);
     box-shadow: 0 1px 3px rgba(0,0,0,.1);
   }
-  
-  /* container row: flex with space between */
+
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap; /* allows wrapping on small screens */
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     width: 100%;
     box-sizing: border-box;
   }
-  
-  /* LEFT */
+
   .brand {
     display: flex;
     align-items: center;
@@ -65,7 +62,7 @@
     max-width: 100%;
   }
 
-  /* Light theme title gradient */
+
   .light .title {
     background: linear-gradient(90deg, #3B82F6 0%, #1E40AF 60%, #60A5FA 100%);
     -webkit-background-clip: text;
@@ -78,8 +75,8 @@
     transform: translateY(-1px);
     text-shadow: 0 4px 12px rgba(0,0,0,0.5);
   }
-  
-  /* RIGHT */
+
+
   .controls {
     display: flex;
     align-items: center;
@@ -91,8 +88,8 @@
     font-size: 14px;
     font-weight: 500;
   }
-  
-  /* Select styling */
+
+
   .selectWrap {
     position: relative;
     border-radius: 8px;
@@ -102,7 +99,7 @@
   }
   .selectWrap:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
   .selectWrap:focus-within { background: linear-gradient(135deg, var(--accent), rgba(255,255,255,.15)); }
-  
+
   .select {
     appearance: none;
     background: var(--panel);
@@ -134,8 +131,8 @@
     background-repeat: no-repeat;
     background-size: 12px 12px;
   }
-  
-  /* Icon buttons */
+
+
   .iconBtn {
     display: flex;
     align-items: center;
@@ -155,8 +152,8 @@
     box-shadow: 0 4px 10px rgba(0,0,0,.25);
   }
   .iconBtn:active { transform: scale(.96); }
-  
-  /* Responsive breakpoints */
+
+
   @media (max-width: 1024px) {
     .inner {
       padding: 0 20px;
@@ -169,7 +166,7 @@
       font-size: 32px; 
     }
   }
-  
+
   @media (max-width: 768px) {
     .inner {
       padding: 0 16px;
@@ -191,7 +188,7 @@
       height: 36px;
     }
   }
-  
+
   @media (max-width: 640px) {
     .inner { 
       flex-direction: column; 
@@ -218,7 +215,7 @@
       height: 48px; 
     }
   }
-  
+
   @media (max-width: 480px) {
     .inner {
       padding: 0 12px;
@@ -240,13 +237,13 @@
       height: 34px;
     }
   }
-  
-  /* --- Anchor for the dropdown --- */
+
+
 .menuAnchor {
   position: relative;
 }
 
-/* --- Dropdown panel --- */
+
 .menu {
   position: absolute;
   right: 0;
@@ -266,7 +263,7 @@
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Header row inside the menu */
+
 .menuHeader {
   display: grid;
   grid-template-columns: 36px 1fr;
@@ -286,14 +283,14 @@
 .menuName { color: var(--text); font-weight: 800; font-size: 14px; }
 .menuEmail { color: var(--muted); font-size: 12px; }
 
-/* Divider */
+
 .menuDivider {
   height: 1px;
   margin: 6px 4px;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
 }
 
-/* Menu item (button) */
+
 .menuItem {
   width: 100%;
   display: grid;
@@ -323,7 +320,7 @@
   border-color: rgba(255,82,82,.45);
 }
 
-/* Small keyboard tag on the right */
+
 .kbd {
   margin-left: 6px;
   padding: 2px 6px;
@@ -335,7 +332,7 @@
   background: rgba(255,255,255,.06);
 }
 
-/* Light theme tweaks */
+
 .light .menu {
   background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
   border-color: rgba(0,0,0,.10);
@@ -385,7 +382,7 @@
   animation: menuIn .16s ease-out both;
 }
 
-/* Mobile notification positioning */
+
 @media (max-width: 768px) {
   .notif {
     right: -20px;
@@ -402,7 +399,7 @@
   }
 }
 
-/* Ensure notification is fully visible on very small screens */
+
 @media (max-width: 360px) {
   .notif {
     right: -60px;
@@ -411,7 +408,7 @@
   }
 }
 
-/* Add some padding to prevent cutoff on mobile */
+
 @media (max-width: 768px) {
   .notif {
     margin-right: 10px;
@@ -450,7 +447,7 @@
   display: grid; gap: 8px;
 }
 
-/* single notification */
+
 .notifItem {
   display: grid;
   grid-template-columns: 24px 1fr auto;
@@ -487,7 +484,7 @@
 
 .notifTime { color: var(--muted); font-size: 12px; }
 
-/* light theme adjustments */
+
 .light .notif {
   background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.01));
   border-color: rgba(0,0,0,.10);

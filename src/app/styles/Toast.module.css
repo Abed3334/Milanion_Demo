@@ -6,36 +6,36 @@
     display: flex;
     gap: 10px;
     align-items: center;
-  
+
     background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
     border: 1px solid rgba(255,255,255,.1);
     border-radius: 12px;
     padding: 10px 12px;
-  
+
     box-shadow: 0 16px 40px rgba(0,0,0,.35);
     backdrop-filter: blur(8px);
-  
+
     animation: slideUp .28s ease-out;
   }
-  
+
   @keyframes slideUp {
     from { transform: translateY(12px); opacity: 0; }
     to   { transform: translateY(0);    opacity: 1; }
   }
-  
+
   .buy { border-color: rgba(0,200,83,.5); box-shadow: 0 16px 40px rgba(0,200,83,.15); }
   .sell{ border-color: rgba(255,82,82,.5); box-shadow: 0 16px 40px rgba(255,82,82,.15); }
-  
+
   .left { display: flex; align-items: center; justify-content: center; flex: 0 0 36px; }
-  
+
   .icon { width: 22px; height: 22px; }
   .buy .icon { color: #00C853; }
   .sell .icon{ color: #FF5252; }
-  
+
   .body { display: flex; flex-direction: column; gap: 4px; flex: 1; }
   .title { color: var(--text); font-weight: 800; }
   .sub { color: var(--muted); font-size: 12px; }
-  
+
   .grid {
     display: flex;
     gap: 8px;
@@ -44,11 +44,11 @@
   .grid > * {
     flex: 1;
   }
-  
+
   .k { color: var(--muted); font-size: 12px; display: block; }
   .v { color: var(--text); font-weight: 600; }
   .vStrong { color: var(--text); font-weight: 800; }
-  
+
   .close {
     background: transparent;
     border: none;
@@ -62,8 +62,8 @@
     flex: 0 0 28px;
   }
   .close:hover { background: rgba(255,255,255,.06); opacity: 1; }
-  
-  /* Responsive: center the toast on small screens */
+
+
   @media (max-width: 600px) {
     .toast {
       left: 12px; right: 12px; bottom: 12px;
@@ -72,4 +72,4 @@
       flex: 0 0 32px;
     }
   }
-  
+

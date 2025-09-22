@@ -1,10 +1,10 @@
-/* Floating Button - Hidden by default, only show on mobile */
+
 .floatingButton {
   position: fixed;
   bottom: 24px;
   left: 24px;
   z-index: 1000;
-  display: none; /* Hidden by default */
+  display: none; 
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
@@ -37,7 +37,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Overlay */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -63,7 +63,7 @@
   }
 }
 
-/* Modal */
+
 .modal {
   background: var(--panel);
   border-radius: 16px;
@@ -131,14 +131,14 @@
   overflow-y: auto;
 }
 
-/* Show floating button only on mobile/responsive screens */
+
 @media (max-width: 1024px) {
   .floatingButton {
-    display: flex; /* Show on mobile */
+    display: flex; 
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .floatingButton {
     bottom: 20px;
@@ -146,25 +146,25 @@
     padding: 10px 16px;
     font-size: 13px;
   }
-  
+
   .buttonText {
     display: none;
   }
-  
+
   .modal {
     max-width: 100%;
     margin: 0 16px;
     max-height: 95vh;
   }
-  
+
   .modalHeader {
     padding: 16px 20px;
   }
-  
+
   .modalTitle {
     font-size: 16px;
   }
-  
+
   .closeButton {
     width: 32px;
     height: 32px;
@@ -181,27 +181,27 @@
     border-radius: 50%;
     justify-content: center;
   }
-  
+
   .modal {
     margin: 0 8px;
     border-radius: 12px;
   }
-  
+
   .modalHeader {
     padding: 12px 16px;
   }
-  
+
   .modalTitle {
     font-size: 15px;
   }
 }
 
-/* Animation for button appearance */
+
 .floatingButton {
   animation: floatIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
 }
 
-/* Light theme floating button */
+
 .light .floatingButton {
   background: linear-gradient(135deg, #3B82F6, #1E40AF);
   box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
@@ -228,7 +228,7 @@
   }
 }
 
-/* Pulse animation for attention */
+
 .floatingButton::before {
   content: '';
   position: absolute;

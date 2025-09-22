@@ -157,7 +157,7 @@
   transition: border-color .15s ease, background .15s ease;
 }
 .pageSize:hover { background: rgba(74,198,255,.12); border-color: var(--accent); }
-/* Professional responsive design */
+
 @media (max-width: 1200px) {
   .wrap {
     padding: 14px;
