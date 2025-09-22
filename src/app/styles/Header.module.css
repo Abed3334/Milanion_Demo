@@ -385,6 +385,39 @@
   animation: menuIn .16s ease-out both;
 }
 
+/* Mobile notification positioning */
+@media (max-width: 768px) {
+  .notif {
+    right: -20px;
+    width: 320px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notif {
+    right: -40px;
+    width: 280px;
+    max-height: 350px;
+  }
+}
+
+/* Ensure notification is fully visible on very small screens */
+@media (max-width: 360px) {
+  .notif {
+    right: -60px;
+    width: 260px;
+    max-height: 300px;
+  }
+}
+
+/* Add some padding to prevent cutoff on mobile */
+@media (max-width: 768px) {
+  .notif {
+    margin-right: 10px;
+  }
+}
+
 .notifHead {
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 12px 8px 12px;
