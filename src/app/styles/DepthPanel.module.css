@@ -1,0 +1,144 @@
+.depthPanel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.04);
+  padding: 16px;
+  width: 100%;
+  max-width: 580px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.depthHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.depthMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.loadingDot {
+  color: var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.depthMsg {
+  color: var(--muted);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Professional responsive breakpoints */
+@media (max-width: 1400px) {
+  .depthPanel {
+    max-width: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .depthPanel {
+    height: 520px;
+    padding: 14px;
+    margin-left: 0px;
+  }
+  .h3 {
+    font-size: 16px;
+  }
+  .depthMeta {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .depthPanel {
+    height: 480px;
+    padding: 12px;
+    margin-left: 0px;
+  }
+  .depthHeader {
+    margin-bottom: 12px;
+  }
+  .h3 {
+    font-size: 15px;
+  }
+  .depthMeta {
+    font-size: 12px;
+  }
+  .depthMsg {
+    font-size: 13px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .depthPanel {
+    height: 420px;
+    padding: 10px;
+    margin-left: 0px;
+  }
+  .depthHeader {
+    margin-bottom: 10px;
+  }
+  .h3 {
+    font-size: 14px;
+  }
+  .depthMeta {
+    font-size: 11px;
+  }
+  .depthMsg {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .depthPanel {
+    height: 380px;
+    padding: 8px;
+    margin-left: 0px;
+  }
+  .depthHeader {
+    margin-bottom: 8px;
+  }
+  .h3 {
+    font-size: 13px;
+  }
+  .depthMeta {
+    font-size: 10px;
+  }
+  .depthMsg {
+    font-size: 11px;
+    padding: 10px;
+  }
+}

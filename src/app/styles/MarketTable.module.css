@@ -1,0 +1,211 @@
+.wrap { 
+  padding: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 573px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.h2 {
+  font-size: 18px; font-weight: 800;
+  color: var(--text);
+}
+.sel { color: var(--muted); }
+
+.gridHead {
+  display: flex; 
+  padding: 10px 12px; margin-bottom: 6px;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.gridHead > * {
+  flex: 1;
+}
+.gridHead > *:first-child {
+  flex: 2;
+}
+
+.body { 
+  display: flex; 
+  flex-direction: column; 
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.row {
+  display: flex; 
+  padding: 10px 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: 10px;
+  margin-bottom: 6px;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .15s ease, background .2s ease;
+}
+.row:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,0,0,.22); border-color: rgba(74,198,255,.5); }
+.row.active { background: linear-gradient(180deg, rgba(74,198,255,.18), rgba(74,198,255,.05)); border-color: rgba(74,198,255,.75); }
+
+.pair { font-weight: 700; letter-spacing: .3px; flex: 2; }
+.last { font-variant-numeric: tabular-nums; flex: 1; }
+.pos { color: var(--positive); font-variant-numeric: tabular-nums; }
+.neg { color: var(--negative); font-variant-numeric: tabular-nums; }
+.vol { color: var(--muted); flex: 1; }
+
+.depthHeader {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+}
+.h3 { font-size: 16px; font-weight: 800; color: var(--text); }
+.depthMeta { color: var(--muted); display: flex; gap: 10px; align-items: center; }
+.loadingDot { letter-spacing: 2px; opacity: .6; }
+
+.pagination {
+  margin-top: auto;
+  padding: 10px 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.06);
+  flex-shrink: 0;
+}
+
+.pageInfo { color: var(--muted); flex: 1; }
+
+.pageControls {
+  display: flex; align-items: center; gap: 8px;
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.pageBtn {
+  min-width: 34px; height: 32px; padding: 0 8px;
+  border-radius: 8px;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.12);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .15s ease, background .2s ease;
+}
+.pageBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  border-color: var(--accent);
+  background: rgba(74,198,255,.15);
+}
+.pageBtn:disabled {
+  opacity: .45; cursor: not-allowed;
+}
+
+.pageNow { color: var(--muted); padding: 0 6px; }
+
+.pageSizeWrap { display: flex; align-items: center; gap: 8px; }
+.pageSizeLabel { color: var(--muted); font-size: 13px; }
+.pageSize {
+  appearance: none;
+  background: var(--panel-2);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text);
+  padding: 6px 34px 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.pageSize:hover { background: rgba(74,198,255,.12); border-color: var(--accent); }
+/* Professional responsive design */
+@media (max-width: 1200px) {
+  .wrap {
+    padding: 14px;
+  }
+  .gridHead, .row {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    padding: 12px;
+  }
+  .h2 {
+    font-size: 16px;
+  }
+  .gridHead, .row {
+    padding: 8px 10px;
+  }
+  .pair {
+    font-size: 14px;
+  }
+  .last, .vol {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 10px;
+  }
+  .h2 {
+    font-size: 15px;
+  }
+  .gridHead, .row {
+    padding: 8px 10px;
+  }
+  .pair {
+    font-size: 13px;
+  }
+  .last, .vol {
+    font-size: 12px;
+  }
+  .pagination {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .pageBtn {
+    min-width: 32px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 8px;
+  }
+  .h2 {
+    font-size: 14px;
+  }
+  .gridHead, .row {
+    padding: 6px 8px;
+  }
+  .pair {
+    font-size: 12px;
+  }
+  .last, .vol {
+    font-size: 11px;
+  }
+  .pagination {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .pageBtn {
+    min-width: 28px;
+    height: 26px;
+    font-size: 11px;
+  }
+  .pageSize {
+    font-size: 11px;
+    padding: 3px 24px 3px 6px;
+  }
+  .pageInfo {
+    font-size: 11px;
+  }
+}

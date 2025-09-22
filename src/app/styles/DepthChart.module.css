@@ -1,0 +1,151 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.side { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  flex: 1;
+  height: 100%;
+}
+
+.row {
+  position: relative;
+  height: 14px;                             
+  background: rgba(255,255,255,.04);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 1px solid rgba(255,255,255,.04);
+}
+
+/* Light theme depth chart rows */
+.light .row {
+  background: rgba(0,0,0,.02);
+  outline: 1px solid rgba(0,0,0,.06);
+}
+
+.barBid {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(0,200,83,.65), rgba(0,200,83,.35));
+}
+
+.barAsk {
+  position: absolute; right: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(255,82,82,.65), rgba(255,82,82,.35));
+}
+
+/* Light theme depth chart colors */
+.light .barBid {
+  background: linear-gradient(90deg, rgba(5,150,105,.7), rgba(5,150,105,.4));
+}
+
+.light .barAsk {
+  background: linear-gradient(90deg, rgba(220,38,38,.7), rgba(220,38,38,.4));
+}
+
+.lbl {
+  position: absolute; inset: 0;
+  font-size: 11px; color: var(--text);
+  display: flex; align-items: center; justify-content: center;
+  opacity: .5;
+}
+
+/* message style */
+.depthEmpty, .depthMsg {
+  color: var(--muted);
+  padding: 10px 12px;
+}
+
+  .barAsk { position: absolute; right: 0; top: 0; bottom: 0; background: rgba(255,82,82,.35); }
+
+/* Professional responsive design */
+@media (max-width: 1400px) {
+  .wrap {
+    gap: 7px;
+  }
+  .side {
+    gap: 5px;
+  }
+  .row {
+    height: 13px;
+  }
+  .lbl {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    gap: 6px;
+  }
+  .side {
+    gap: 4px;
+  }
+  .row {
+    height: 12px;
+  }
+  .lbl {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    gap: 5px;
+  }
+  .side {
+    gap: 3px;
+  }
+  .row {
+    height: 10px;
+  }
+  .lbl {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    gap: 4px;
+  }
+  .side {
+    gap: 2px;
+  }
+  .row {
+    height: 8px;
+  }
+  .lbl {
+    font-size: 7px;
+  }
+  .depthEmpty, .depthMsg {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    gap: 3px;
+  }
+  .side {
+    gap: 1px;
+  }
+  .row {
+    height: 6px;
+  }
+  .lbl {
+    font-size: 6px;
+  }
+  .depthEmpty, .depthMsg {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+}
+  

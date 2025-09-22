@@ -1,42 +1,101 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---- Base / reset ---- */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
 }
-
-html,
 body {
-  max-width: 100vw;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ---- Melanion palette (from logo) ---- */
+:root {
+  --bg: #0D1B2A;            /* primary dark background */
+  --panel: #13283B;         /* card bg */
+  --panel-2: #0F2234;       /* slightly darker */
+  --brand: #003366;         /* brand blue */
+  --accent: #4AC6FF;        /* light blue accent */
+  --text: #F5F7FA;          /* on dark */
+  --muted: #9AA7B5;
+
+  --positive: #00C853;
+  --negative: #FF5252;
+
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(0,0,0,.25);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+.card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.04);
+  width: 100%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Light theme specific card styling */
+.light .card {
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: var(--shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.light {
+  --bg: #FAFBFC;                    /* Soft, clean background */
+  --panel: #FFFFFF;                 /* Pure white panels */
+  --panel-2: #F8FAFC;              /* Subtle panel variation */
+  --brand: #1E40AF;                /* Professional blue */
+  --accent: #3B82F6;               /* Vibrant but professional accent */
+  --text: #1F2937;                 /* Rich dark text */
+  --muted: #6B7280;                /* Professional muted text */
+  
+  --positive: #059669;             /* Professional green */
+  --negative: #DC2626;             /* Professional red */
+  
+  --radius: 12px;                  /* Slightly smaller radius for light theme */
+  --shadow: 0 4px 20px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.1);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+  .containerDashboard {
+    flex-direction: column !important;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 8px;
+  }
+}
+
+
+
