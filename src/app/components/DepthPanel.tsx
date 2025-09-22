@@ -40,7 +40,9 @@ export default function DepthPanel({ symbol }: Props) {
           {loading && <span className={styles.loadingDot} aria-hidden>• • •</span>}
         </div>
       </div>
-      {err ? <div className={styles.depthMsg}>{err}</div> : <DepthChart book={book} />}
+      <div className={styles.depthContent}>
+        {err ? <div className={styles.depthMsg}>{err}</div> : <DepthChart book={book} />}
+      </div>
     </div>
   );
 }
