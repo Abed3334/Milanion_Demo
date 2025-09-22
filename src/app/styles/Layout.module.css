@@ -3,11 +3,11 @@
     flex-direction: column;
     gap: 24px;
     max-width: 1400px;
-   
+
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -15,12 +15,12 @@
     align-items: start;
     margin-left: 140px;
   }
-  
+
   .left {
     min-width: 0;
     width: 100%;
   }
-  
+
 .right {
   min-width: 0;
   width: 100%;
@@ -29,15 +29,15 @@
 .desktopOrderForm {
   display: block;
 }
-  
-  /* Professional responsive breakpoints */
+
+
   @media (max-width: 1400px) {
-    
+
   }
-  
+
   @media (max-width: 1200px) {
     .dashboard {
-      
+
       gap: 20px;
     }
     .row {
@@ -46,21 +46,21 @@
       padding: 10px;
     }
   }
-  
+
 @media (max-width: 1024px) {
   .row {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .desktopOrderForm {
     display: none;
   }
 }
-  
+
   @media (max-width: 768px) {
     .dashboard {
-      
+
       gap: 16px;
     }
     .row {
@@ -68,11 +68,11 @@
       margin-left: 0px;
     }
   }
-  
+
   @media (max-width: 480px) {
     .dashboard {
-     
+
       gap: 12px;
     }
   }
-  
+
